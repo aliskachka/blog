@@ -1,0 +1,147 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Cooking with Alli</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add border to the sides */
+        .page-border {
+            border-left: 8px solid #DB2777; /* Pink border */
+            border-right: 8px solid #DB2777;
+            padding: 20px;
+        }
+
+        /* Responsive padding */
+        @media (max-width: 768px) {
+            .page-border {
+                padding: 10px;
+            }
+        }
+
+        /* Additional styles for the content */
+        .content {
+            background-color: #1b0c04; /* Darker background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            color: white;
+            font-family: 'Georgia', serif; /* Consistent font-serif */
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p, .content li {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Georgia', serif; /* Ensure font-serif consistency */
+        }
+
+        /* Contact form styling */
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #DB2777;
+            border-radius: 4px;
+            background-color: #5a3c4e;
+            color: white;
+            font-family: 'Georgia', serif;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #F43F5E;
+        }
+
+        .contact-form button {
+            background-color: #DB2777;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #BF1856;
+        }
+        
+        .bg-white:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    
+    </style>
+</head>
+<body class="bg-zinc-900 font-serif">
+
+<!-- Navigation Menu -->
+<nav class="bg-white p-4 shadow-md">
+    <ul class="flex justify-center space-x-6">
+        <li><a href="home.html" class="text-black text-xl hover:text-pink-600">Home</a></li>
+        <li><a href="blogs.html" class="text-black text-xl hover:text-pink-600">Blogs</a></li>
+        <li><a href="about.html" class="text-black text-xl hover:text-pink-600">About Us</a></li>
+        <li><a href="contact.html" class="text-black text-xl hover:text-pink-600">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Page Layout with Border Effect -->
+<div class="page-border mx-auto mt-12 max-w-6xl">
+    <div class="content">
+        <h1 class="text-center">Contact Us</h1>
+        <p class="text-center">
+            Have questions, feedback, or just want to say hello? We'd love to hear from you! Feel free to reach out using the contact details or form below.
+        </p>
+
+        <!-- Contact Details -->
+        <div class="mt-6">
+            <h2 class="font-bold text-xl mb-4">Get in Touch</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:contact@cookingwithalli.com" class="text-pink-600">contact@cookingwithalli.com</a></li>
+                <li><strong>Phone:</strong> <span class="text-pink-600">(123) 456-7890</span></li>
+                <li><strong>Address:</strong> <span class="text-pink-600">123 Foodie Lane, Flavor Town, USA</span></li>
+                <li><strong>Follow Us:</strong>
+                    <a href="#" class="text-pink-600 hover:underline">Instagram</a>,
+                    <a href="#" class="text-pink-600 hover:underline">Facebook</a>,
+                    <a href="#" class="text-pink-600 hover:underline">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form mt-6">
+            <h2 class="font-bold text-xl mb-4">Send Us a Message</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Cooking with Alli. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Cooking with Alli</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add border to the sides */
+        .page-border {
+            border-left: 8px solid #DB2777; /* Pink border */
+            border-right: 8px solid #DB2777;
+            padding: 20px;
+        }
+
+        /* Responsive padding */
+        @media (max-width: 768px) {
+            .page-border {
+                padding: 10px;
+            }
+        }
+
+        /* Additional styles to make the content look more polished */
+        .content {
+            background-color: #1b0c04; /* Darker background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            color: white;
+            font-family: 'Georgia', serif; /* Ensure font-serif consistency */
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Larger header for desktops */
+        @media (min-width: 1024px) {
+            .content h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .content p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content ul li {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Georgia', serif; /* Ensure font-serif consistency */
+        }
+
+        /* Larger footer text */
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Button styling */
+        .cta-button {
+            background-color: #DB2777;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            font-family: 'Georgia', serif; /* Ensure font-serif consistency */
+        }
+
+        .cta-button:hover {
+            background-color: #BF1856;
+        }
+        
+        .bg-white:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+    </style>
+</head>
+<body class="bg-zinc-900 font-serif">
+
+<!-- Navigation Menu -->
+<nav class="bg-white p-4 shadow-md">
+    <ul class="flex justify-center space-x-6">
+        <li><a href="home.html" class="text-black text-xl hover:text-pink-600">Home</a></li>
+        <li><a href="blogs.html" class="text-black text-xl hover:text-pink-600">Blogs</a></li>
+        <li><a href="about.html" class="text-black text-xl hover:text-pink-600">About Us</a></li>
+        <li><a href="contact.html" class="text-black text-xl hover:text-pink-600">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Page Layout with Border Effect -->
+<div class="page-border mx-auto mt-12 max-w-6xl">
+    <div class="content">
+
+        <h1 class="text-center underline">About Us</h1> <!-- not sure why its not underined-->
+        <p class="text-center">
+            Welcome to <span class="text-pink-600">Cooking with Alli</span>, where food meets passion. Our mission is to inspire culinary creativity and foster a community of food enthusiasts. Whether you're a novice in the kitchen or a seasoned chef, there's something here for everyone!
+        </p>
+
+        <h2 class="font-bold text-xl mb-4 text-center">Our Vision</h2>
+        <p>
+            We believe in bringing people together through the love of food. Our platform is designed to offer simple yet delightful recipes, cooking tips, and a space for food lovers to connect and share their experiences.
+        </p>
+
+        <h2 class=" text-xl mb-4 text-center font-bold">What We Offer</h2>
+        <ul>
+            <li><span class="text-pink-600 font-bold">Creative Dishes:</span> From classic dishes to modern flavors, we provide step-by-step guides to make every meal memorable.</li>
+            <li><span class="text-pink-600 font-bold">Cooking Tips:</span> Learn kitchen hacks and techniques to elevate your cooking game.</li>
+            <li><span class="text-pink-600 font-bold">Inspirational Stories:</span> Discover the joy of cooking through personal anecdotes and guest features.</li>
+            <li><span class="text-pink-600 font-bold">Community Support:</span> Join a community of food enthusiasts and share your culinary journey with others.</li>
+        </ul>
+
+        <!-- Call-to-Action Button -->
+        <div class="text-center mt-6">
+            <a href="blogs.html" class="cta-button">Explore Recipes</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Cooking with Alli. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

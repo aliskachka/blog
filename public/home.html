@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .block {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: white;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 1s, transform 1s;
+            position: relative;
+            animation: none;  /* Initially no animation */
+        }
+        .block.visible {
+            animation: appear 2s ease-out forwards; /* Animation applied when element becomes visible */
+        }
+        .block-container {
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: center;  
+            gap: 20px;  
+        }
+        .block:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .block:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .block:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .block:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .block:nth-child(5) {
+            animation-delay: 2s;
+        }
+
+        .video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .block {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .block {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Hover effect for blocks */
+        .block:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Typewriter effect */
+        .typewriter {
+            display: inline-block;
+            overflow: hidden; /* Ensures the text is hidden until it's typed */
+            border-right: 3px solid;
+            white-space: nowrap; /* Prevents the text from wrapping */
+            width: 0; /* Start with width 0 */
+            animation: typing 4.5s steps(30) 1s forwards, blink 0.75s step-end 3.3s 1 forwards; /* Typewriting effect */
+            line-height: 1.2; /* Adjust line-height to fix cutoff issue */
+            padding-bottom: 10px; /* Add padding at the bottom to prevent text from being cut off */
+            text-align: center; /* Keep the text centered */
+            margin: 0 auto; /* Centers the element in its container */
+            animation-fill-mode: forwards; /* Keeps the final state after animation */
+}
+
+/* Blink animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Adjust the width to 100% once typing is finished */
+    }
+}
+        /* Fade in effect for h2 and h3 */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Delay fade-in for h2 and h3 */
+        .fade-in-delay {
+            animation-delay: 4s;
+        }
+
+        .custom-small-text {
+            font-size: 0.7rem; /* 8px - smaller than text-xs */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .max-w-3xl {
+            max-width: 48rem; /* Adjust to control how wide the text block is */
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    
+    </style>
+</head>
+
+<body class="bg-zinc-900">
+
+<!-- Navigation Menu -->
+<nav class="bg-zinc-900 p-4 shadow-md relative z-20">  
+    <ul class="flex justify-center space-x-6">
+        <li><a href="home.html" class="font-serif text-white text-xl hover:text-pink-600">Home</a></li>
+        <li><a href="blogs.html" class="text-white text-xl hover:text-pink-600 font-serif">Blogs</a></li>
+        <li><a href="about.html" class="font-serif text-white text-xl hover:text-pink-600">About Us</a></li>
+        <li><a href="contact.html" class="font-serif text-white text-xl hover:text-pink-600">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Video Background -->
+<div class="video-container">
+    <video autoplay loop muted playsinline>
+        <source src="assets/bgvid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white z-10">
+        <!-- Apply the typewriter class to the h1 -->
+        <h1 class="font-serif text-8xl font-bold mb-4 typewriter">Cooking with Alli.</h1>
+        <br>
+        <!-- Apply fade-in-delay to h2 and h3 -->
+        <h2 class="font-serif text-xl mb-6 text-center max-w-3xl mx-auto fade-in fade-in-delay">Welcome to Cooking with Alli, where the secrets of cooking unfold with every recipe. Here, you'll explore flavors, techniques, and hidden gems that will inspire your kitchen creations. Step inside and discover the art of cooking like never before.</h2>
+        <br><br>
+        <h3 class="font-serif custom-small-text text-center fade-in fade-in-delay">Blog created by Allison Loskot.</h3>
+    </div>
+</div> 
+
+<!-- Box Animation Section -->
+<div class="content"></div>
+<div class="block-container">
+    <div class="block">
+        <img src="assets/1.png" alt="Image 1" class="w-full h-full object-cover">
+    </div>
+    <div class="block">
+        <img src="assets/2.png" alt="Image 2" class="w-full h-full object-cover">
+    </div>
+    <div class="block">
+        <img src="assets/3.png" alt="Image 3" class="w-full h-full object-cover">
+    </div>
+    <div class="block">
+        <img src="assets/4.png" alt="Image 4" class="w-full h-full object-cover">
+    </div>
+    <div class="block">
+        <img src="assets/5.png" alt="Image 5" class="w-full h-full object-cover">
+    </div>
+    
+</div>
+
+<!-- Bottom of Page -->
+<h1 class="font-serif text-center text-1xl text-white mt-1 mb-1">Our personal favorites</h1>
+
+<!-- Scroll Animation Script -->
+<script>
+    const blocks = document.querySelectorAll('.block');
+
+    // Function to check if element is in viewport using IntersectionObserver
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    }, { threshold: 0.5 });
+
+    blocks.forEach(block => {
+        observer.observe(block);
+    });
+</script>
+<!-- Footer -->
+<footer class="bg-black p-6 mt-12 text-center text-white">
+    <p class="font-serif">&copy; 2024 Cooking with Alli. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
