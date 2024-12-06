@@ -14,4 +14,5 @@ HTML5: For semantic structure and content.
 CSS3 (Tailwind CSS): For modern, utility-first styling and responsiveness.
 JavaScript: Enhances interactivity if additional features are implemented.
 
-I hope you enjoy :)
+The only issue I am currently facing involves the video files on my blog. When accessing the blog through the GitHub Pages URL, the videos take a while to start playing. I have already compressed the video files, ensured they are properly linked in the code, and tested them thoroughly. Notably, there are no issues when loading the blog through the live server on Visual Studio Code, where the videos play seamlessly. However, there is still a delay on GitHub. I am actively working on optimizing the video playback to resolve this.
+
